@@ -4,19 +4,26 @@
     box-sizing: border-box;
 }
 .wrapper {
+    background-color: #F5F5F1;
     max-width: 1440px;
     padding: 50px;
 }
 .container {
-    
+    background-color: #F5F5F1;
+
 }
 .header {
+    text-align: center;
 }
-p{
+p{ 
     font-size: 0.7rem;
 }
-.title {
+.title h2{
+    font-size: 1rem;
+    color: #3A3A3A;
     text-transform: uppercase;
 }
 .row {
+  padding: 10px;
+  margin: auto;
 }

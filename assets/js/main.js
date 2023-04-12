@@ -7,21 +7,27 @@ let row = document.querySelector('.row');
 function cards(user, ruolo, img) {
 
     let elementDiv = document.createElement('div')
-    elementDiv.style.width = '14rem'
+    elementDiv.style.width = '12rem'
     elementDiv.className = 'card'
-    elementDiv.style.backgroundColor = 'red'
+    elementDiv.style.backgroundColor = 'white'
     row.appendChild(elementDiv)
 
 
 
     let elemImg = document.createElement('img')
-    elemImg.className = `card-img-top `
+    elemImg.className = 'card-img-top'
+    elemImg.style.width='100%'
     elemImg.src = img
     elementDiv.append(elemImg);
     let nameUser = document.createElement('h3')
+    nameUser.style.paddingTop='10px'
+    nameUser.style.color='#7F7A74'
+    nameUser.style.fontSize='100%'
     nameUser.innerHTML += user
     elementDiv.appendChild(nameUser)
     let subtitle = document.createElement('h5')
+    subtitle.style.color='#A09D99'
+    subtitle.style.fontSize='x-small'
     subtitle.innerHTML = ruolo
     elementDiv.appendChild(subtitle)
 
