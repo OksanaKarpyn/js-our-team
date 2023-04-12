@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    max-width: 1440px;
+    padding: 50px;
+}
+.container {
+    
+}
+.header {
+}
+p{
+    font-size: 0.7rem;
+}
+.title {
+    text-transform: uppercase;
+}
+.row {
+}
