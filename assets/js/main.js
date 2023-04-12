@@ -10,10 +10,6 @@ let arrImgSrc = [
     './assets/img/barbara-ramos-graphic-designer.jpg'
 ]
 
-for (let i = 0; i <arrImgSrc.length; i++) {
-   let card =  cards()
-    card.innerHTML += `${arrImgSrc[i]}`
-}
 
 
 
@@ -25,11 +21,13 @@ function cards() {
         elementDiv.className = 'card'
         elementDiv.style.backgroundColor = 'red'
         row.appendChild(elementDiv)
+        for (let i = 0; i <arrImgSrc.length; i++){
 
-        let elemImg = document.createElement('img')
-        elemImg.className = 'card-img-top'
-        elemImg.src =arrImgSrc[i]
-        elementDiv.append(elemImg);
+            let elemImg = document.createElement('img')
+            elemImg.className = 'card-img-top'
+            elemImg.src =arrImgSrc[i]
+            elementDiv.append(elemImg);
+        }
 
 
         return elementDiv
