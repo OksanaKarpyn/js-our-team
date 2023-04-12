@@ -5,35 +5,32 @@ let row = document.querySelector('.row');
 
 
 function cards(user, ruolo, img) {
-
+// card
     let elementDiv = document.createElement('div')
     elementDiv.style.width = '12rem'
     elementDiv.className = 'card'
     elementDiv.style.backgroundColor = 'white'
     row.appendChild(elementDiv)
-
-
-
+// img
     let elemImg = document.createElement('img')
     elemImg.className = 'card-img-top'
     elemImg.style.width='100%'
     elemImg.src = img
     elementDiv.append(elemImg);
+    // title
     let nameUser = document.createElement('h3')
     nameUser.style.paddingTop='10px'
     nameUser.style.color='#7F7A74'
     nameUser.style.fontSize='100%'
     nameUser.innerHTML += user
     elementDiv.appendChild(nameUser)
+    // subtitle
     let subtitle = document.createElement('h5')
     subtitle.style.color='#A09D99'
     subtitle.style.fontSize='x-small'
     subtitle.innerHTML = ruolo
     elementDiv.appendChild(subtitle)
-
 }
-
-
 
 const team = [{
         name: 'Wayne Barnett',
@@ -72,46 +69,8 @@ for (let i = 0; i < team.length; i++) {
     let singleElements = team[i]
     let nameUser = singleElements.name;
     let role = singleElements.role;
-    let img = `./assets/img/${singleElements.image}`
+    let imgSrl= './assets/img/'
+    let img = `${imgSrl}${singleElements.image}`
     cards(nameUser, role, img)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-// function cards() {
-//     let elementDiv = document.createElement('div')
-//     elementDiv.style.width = '18rem'
-//     let elemImg = document.createElement('img')
-//     elemImg.className = 'card-img-top'
-//     elementDiv.append(elemImg);
-
-//     function cardBody() {
-//         let cardBody = document.createElement('div')
-//         let cardTitle = document.createElement('h5')
-//         cardTitle.classList.add('card-title')
-//         let paragraf = document.createElement('p')
-//         paragraf.classList.add('card-text')
-//         paragraf.innerText = `Angela carol`
-//         cardBody.appendChild(cardTitle, paragraf)
-//     }
-
-//     elementDiv.append(cardBody())
-//     return elementDiv + cardBody()
-// }
-// cards()
-// let card = cards()
-
-
-
-
-
-// row.innerHTML += `${card}`
