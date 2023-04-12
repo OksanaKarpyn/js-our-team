@@ -18,25 +18,14 @@ function cards(user, ruolo, img) {
     elemImg.className = `card-img-top `
     elemImg.src = img
     elementDiv.append(elemImg);
-
-
-
+    let nameUser = document.createElement('h3')
+    nameUser.innerHTML += user
+    elementDiv.appendChild(nameUser)
+    let subtitle = document.createElement('h5')
+    subtitle.innerHTML = ruolo
+    elementDiv.appendChild(subtitle)
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -75,10 +64,10 @@ const team = [{
 for (let i = 0; i < team.length; i++) {
 
     let singleElements = team[i]
-    let nameUtente = singleElements.name;
+    let nameUser = singleElements.name;
     let role = singleElements.role;
     let img = `./assets/img/${singleElements.image}`
-     cards(nameUtente, role, img)
+    cards(nameUser, role, img)
 }
 
 
