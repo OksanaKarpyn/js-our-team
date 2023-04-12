@@ -1,41 +1,29 @@
 let row = document.querySelector('.row');
 
 
-let arrImgSrc = [
-    './assets/img/wayne-barnett-founder-ceo.jpg',
-    './assets/img/angela-caroll-chief-editor.jpg',
-    './assets/img/walter-gordon-office-manager.jpg',
-    './assets/img/angela-lopez-social-media-manager.jpg',
-    './assets/img/scott-estrada-developer.jpg',
-    './assets/img/barbara-ramos-graphic-designer.jpg'
-]
 
 
 
+function cards(user, ruolo, img) {
+
+    let elementDiv = document.createElement('div')
+    elementDiv.style.width = '14rem'
+    elementDiv.className = 'card'
+    elementDiv.style.backgroundColor = 'red'
+    row.appendChild(elementDiv)
 
 
-function cards() {
-    for (let i = 0; i < 6; i++) {
-        let elementDiv = document.createElement('div')
-        elementDiv.style.width = '14rem'
-        elementDiv.className = 'card'
-        elementDiv.style.backgroundColor = 'red'
-        row.appendChild(elementDiv)
-        for (let i = 0; i <arrImgSrc.length; i++){
 
-            let elemImg = document.createElement('img')
-            elemImg.className = 'card-img-top'
-            elemImg.src =arrImgSrc[i]
-            elementDiv.append(elemImg);
-        }
+    let elemImg = document.createElement('img')
+    elemImg.className = `card-img-top `
+    elemImg.src = img
+    elementDiv.append(elemImg);
 
 
-        return elementDiv
-    }
 
 
 }
-let card = cards()
+
 
 
 
@@ -85,12 +73,12 @@ const team = [{
 ];
 
 for (let i = 0; i < team.length; i++) {
-    let singleElements = team[i]
-    console.log(singleElements);
-    for (let key in singleElements) {
-        document.writeln(singleElements[key])
-    }
 
+    let singleElements = team[i]
+    let nameUtente = singleElements.name;
+    let role = singleElements.role;
+    let img = `./assets/img/${singleElements.image}`
+     cards(nameUtente, role, img)
 }
 
 
